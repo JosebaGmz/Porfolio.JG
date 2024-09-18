@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+{
+    date: "abr. 2024 - jun.2024 . 3 meses",
+    title: "Desarrollador de software",
+    company: "FRESIA SOFTWARE SOLUTIONS",
+    description:
+      "Practicas del grado superior DAM, realice tareas de desarrollo en C#, Pruebas Unitarias, Swagger API y React para desarrollar un programa de gestión de academias.",
+    link: "https://www.linkedin.com/company/fresia-software-solutions/",
+  },
+  {
+    date: "mar. 2022 - sept. 2022",
+    title: "Técnico MicroInformatico",
+    company: "CYBERDRIVE",
+    description:
+      "Tecnico MicroInformatico, realice tareas de asistencia help desk, reparación de ordenadores, servidores y instalaciónes de red.",
+},
+]
+---
+<ol class="relative mt-16">                  
+    {
+        EXPERIENCE.map((experience) =>(
+            <li class="">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }
+</ol>
+
