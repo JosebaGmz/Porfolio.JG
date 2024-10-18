@@ -1,4 +1,5 @@
 ---
+import AngularIcon from "../icons/AngularIcon.astro";
 import FireBaseIcon from "../icons/FireBaseIcon.astro";
 import FlutterIcon from "../icons/FlutterIcon.astro";
 import GitHubIcon from "../icons/GitHubIcon.astro";
@@ -9,7 +10,7 @@ import LinkButton from "./LinkButton.astro";
 const TAGS = {
   JAVA: {
     name: "Java",
-    class: "bg-black text-white",
+    class: "bg-[#003159] text-white",
     icon: JavaIcon,
   },
   FLUTTER: {
@@ -22,6 +23,11 @@ const TAGS = {
     class: "bg-black text-white",
     icon: FireBaseIcon,
   },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-black text-white",
+    icon: AngularIcon,
+  }
 }
 const PROJECTS = [
   {
@@ -32,13 +38,24 @@ const PROJECTS = [
     github: "https://github.com/JosebaGmz/Proyecto-Final",
     image: "https://raw.githubusercontent.com/JosebaGmz/Porfolio.JG/main/public/assets/TFG.webp",
     tags: [TAGS.FLUTTER, TAGS.FIREBASE],
+    backEnd: "https://github.com/JosebaGmz/Proyecto-Final"
+  },
+  {
+    title: "Proyecto CRUD - Gestión de Inventarios",
+    description:
+      "Aplicación de Gestión de inventarios creada en Java, Mysql, Spring Boot y Angular con consultas HttpRequest GET, PUT, DELETE, POST.",
+    link: "ew",
+    github: "https://github.com/JosebaGmz/ProyectoGinventariosFrontEnd",
+    image: "https://raw.githubusercontent.com/JosebaGmz/Porfolio.JG/main/public/assets/GIProyect.png",
+    tags: [TAGS.JAVA, TAGS.ANGULAR],
+    backEnd: "https://github.com/JosebaGmz/ProyectoGinventariosBackEnd"
   },
 ]
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, github, backEnd }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -77,6 +94,12 @@ const PROJECTS = [
             <LinkButton href={link}>
               <Link class="size-4" />
               Preview
+            </LinkButton>
+          )}
+          {backEnd &&(
+            <LinkButton href={backEnd}>
+              <GitHubIcon class="size-6"/>
+              BackEnd
             </LinkButton>
           )}
         </footer>
