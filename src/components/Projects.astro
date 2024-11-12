@@ -5,6 +5,7 @@ import FlutterIcon from "../icons/FlutterIcon.astro";
 import GitHubIcon from "../icons/GitHubIcon.astro";
 import JavaIcon from "../icons/JavaIcon.astro";
 import Link from "../icons/Link.astro";
+import ReactIcon from "../icons/ReactIcon.astro";
 import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
@@ -27,6 +28,11 @@ const TAGS = {
     name: "Angular",
     class: "bg-black text-white",
     icon: AngularIcon,
+  },
+  REACT : {
+    name: "React",
+    class: "bg-black text-white",
+    icon: ReactIcon,
   }
 }
 const PROJECTS = [
@@ -42,11 +48,20 @@ const PROJECTS = [
   {
     title: "Proyecto CRUD - Gestión de Inventarios",
     description:
-      "Aplicación de Gestión de inventarios creada en Java, Mysql, Spring Boot y Angular con consultas HttpRequest GET, PUT, DELETE, POST.",
+      "Aplicación de Gestión de inventarios creada en Java, PostgreSQL, Spring Boot y Angular con consultas HttpRequest GET, PUT, DELETE, POST.",
     link: "",
     github: "https://github.com/JosebaGmz/ProyectoGinventarios",
     image: "https://raw.githubusercontent.com/JosebaGmz/Porfolio.JG/main/public/assets/GIProyect.png",
     tags: [TAGS.JAVA, TAGS.ANGULAR],
+  },
+  {
+    title: "Proyecto CRUD - Recursos Humanos",
+    description:
+      "Aplicación de Recursos Humanos creada en java, PostgreSQL, Spring Boot y React con consultas HttpRequest GET, PUT, DELETE, POST.",
+    link: "",
+    github: "https://github.com/JosebaGmz/ProyectoRecursosHumanos",
+    image: "https://raw.githubusercontent.com/JosebaGmz/Porfolio.JG/main/public/assets/ProyectRh.png",
+    tags: [TAGS.JAVA,TAGS.REACT],
   },
   {
     title: "Ejercicios Logica en Java",
